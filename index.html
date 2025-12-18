@@ -10,8 +10,69 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
 
-    
+  <style>
+    html, body, main {
+  height: 100%;
+  margin: 0;
+  padding: 0;}
+    body {
+      background: #1b1b1b;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
+    .table-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background: #2e7d32;
+      border-radius: 50%;
+      margin-left: 25%;
+      box-shadow: inset 0 0 20px rgba(125, 124, 124, 0.5);
+    }
+
+    .player {
+      position: absolute;
+      width: 120px;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      background: #ffcc80;
+      border-radius: 50%;
+      margin: 50px 40px 3px;
+    }
+
+    .info {
+      background: #dddddd;
+      padding: 4px 6px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .controls {
+      margin-top: -27%;
+      margin-left: 80%
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      background: #ff9800;
+      color: #000;
+    }
+  </style>
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Favicons -->
@@ -33,14 +94,6 @@
           font-size: 3.5rem;
         }
       }
-    
-      /* .b-example-divider {
-        height: 2.5rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      } */
 
         @media (min-width: 992px) {
         .rounded-lg-3 { border-radius: .3rem; }
@@ -131,11 +184,104 @@
           </div>
         </div>
       </section>
-    </main>
+
     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/e41e1387d0.js" crossorigin="anonymous"></script>
 
+    <section>
+
+        <div class="container col-xxl-8 px-4 py-5">
+           <div class="row flex-lg-row-reverse align-items-center g-3 py-1">
+            <div class="col-lg-12"> 
+          <h3 class="fw-bold lh-1 mb-3 text-danger">Example</h3>
+          <div style="margin-bottom: 30%">
+          <h4>Round 1</h4>
+    <div class="table-container " id="table">
+    <!-- Players will be inserted here -->
+  </div>
+    <div class="controls">
+    <button onclick="deal()">Deal New Cards</button>
+  </div>
+</div>
+<div>
+          <h4>Round 2</h4>
+          <p><b>Scenario 1:</b> The player who has the ranking "A" decides to pass. The player retires. Game moves on to the player who has the ranking "K".</p>
+ <p><b>Scenario 2:</b> The player who has the ranking "A" decides to challenge the player who has the ranking "J". </p>
+  <ul>
+      <li>If "A" wins, the two players swap gifts. "A" retires. Game moves on to the player who has the ranking "K".</li>
+      <li>If "J" wins, no gifts are swapped. "A" takes over the ranking "J", and "J" takes over the ranking "A". Both players remain active. The new "A" takes an action of passing or challenging.</li>
+    </div>
+ <p>When there is only one active player left, the game ends and everybody keeps their current gifts.</p>
+            </div>
+        </div>
+  </div>
+</section>
+<div class="container-fluid bg-danger text-white text-center py-4">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4">🎄 Have Fun & Merry Christmas! 🎅</h1>
+                <p class="lead mb-0">Wishing you a joyful and peaceful holiday season.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+ <script>
+    const names = [
+      "Alex", "Jordan", "Taylor", "Chris", "Morgan",
+      "Sam", "Jamie", "Riley", "Casey", "Drew"
+    ];
+
+    const cards = ["A", "K", "Q", "J", "10"];
+
+    const table = document.getElementById("table");
+
+    function shuffle(array) {
+      return array
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+    }
+
+    function randomName() {
+      return names[Math.floor(Math.random() * names.length)];
+    }
+
+    function deal() {
+      table.innerHTML = "";
+
+      const shuffledCards = shuffle([...cards]).slice(0, 5); // unique cards
+
+      const centerX = 200;
+      const centerY = 200;
+      const radius = 170;
+
+      for (let i = 0; i < 5; i++) {
+        const angle = (2 * Math.PI / 5) * i - Math.PI / 2;
+
+        const x = centerX + radius * Math.cos(angle);
+        const y = centerY + radius * Math.sin(angle);
+
+        const player = document.createElement("div");
+        player.className = "player";
+        player.style.left = `${x}px`;
+        player.style.top = `${y}px`;
+
+        player.innerHTML = `
+          <div class="avatar"></div>
+          <div class="info">
+            <strong>${randomName()}</strong><br>
+            Ranking: ${shuffledCards[i]}
+          </div>
+        `;
+
+        table.appendChild(player);
+      }
+    }
+
+    deal();
+  </script>
     </body>
 </html5>
