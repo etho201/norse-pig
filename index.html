@@ -8,12 +8,8 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Norse Pig - Erik's original Christmas Game</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
-
-    
-
     <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Favicons -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta name="theme-color" content="#7952b3">
@@ -75,8 +71,8 @@
                 <h3 class="fw-bold lh-1 mb-3 text-danger">Gift Value Requirement: $50</h1>
                 <ul>
                     <li>The <strong>paid value (before taxes)</strong> of the gift must be at least <strong>$50</strong></li>
-                    <div class="alert alert-danger">
-                    <i class="fas fa-bomb"></i> <strong>Important:</strong> You cannot pay less than $50 for your gift. It's okay to pay more than $50 or find a deal for an item that's worth $70 and only pay $50, but you can't pay less than $50.
+                    <div class="alert alert-danger" role="alert">
+                      <i class="fas fa-bomb"></i> <strong>Important:</strong> You cannot pay less than $50 for your gift. It's okay to pay more than $50 or find a deal for an item that's worth $70 and only pay $50, but you can't pay less than $50.
                     </div>
                     <li>Must surrender receipt (proof of purchase) showing purchase information to be eligible to play.</li>
                     <li>You can combine multiple items to reach the value requirement. Just be sure to keep them together as they can't be broken up during the game.</li>
@@ -103,28 +99,31 @@
               <h4>Round 1: Rank Players</h2>
               <ul>
                   <li>Deal all players one 5-card poker hand.</li>
-                  <li>Assign numbers by hand strength: smallest number #1 (best hand) to biggest number (worst hand).</li>
-                  <li>Ties: Redeal only tied players until resolved.</li>
-                  <li>Player with smallest number picks/opens gift from center first, then next smallest, etc.</li>
+                  <li>Assign numbers by <a href="images/poker-cheatsheet.jpg" target="_blank">hand strength</a>. hand strength: Person with the strongest hand is the ace, second place is king, third place is queen, and so forth...</li>
+                  <li>Ties: Redeal only tied players until a clear order is established.</li>
+                  <li>Player with the highest rank (ace) picks and opens a gift from the center first, then the king, then the queen, etc...</li>
+                  <div class="alert alert-info" role="alert">
+                    <i class="fa-solid fa-circle-info"></i><strong>Rankings: </strong>A, K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3 and 2
+                  </div>
               </ul>
               
               <h4>Round 2: Challenges</h2>
-              <p>Gifts visible.</p>
+              <p>All gifts are now opened.</p>
               <ul>
-                  <li>Turns proceed in order from smallest number to biggest among active (non-retired) players. On your turn, you may issue a challenge or pass.</li>
-                  <li>You may challenge only players with <strong>bigger</strong> numbers. Smallest number can challenge anyone; biggest number can challenge none.</li>
+                  <li>Turns proceed in order from the highest rank to lowest among active (non-retired) players. On your turn, you may issue a challenge or pass.</li>
+                  <li>You may challenge only players who are <strong>lower</strong> rank than you. Highest rank can challenge anyone; lowest rank can challenge none.</li>
                   <li>Resolve: New 5-card poker hand (challenger vs. target).
                       <ul>
-                          <li><strong>Challenger wins:</strong> Swap gifts. Numbers unchanged. Challenger retires (no further challenges).</li>
-                          <li><strong>Challenger loses:</strong> No gift swap. Swap numbers. Challenger stays active.</li>
+                          <li><strong>Challenger wins:</strong> Swap gifts. Ranks unchanged. Challenger retires (no further challenges).</li>
+                          <li><strong>Challenger loses:</strong> No gift swap. Swap ranks. Challenger stays active.</li>
                       </ul>
                   </li>
-                  <li>After a challenge, if any active players remain, continue with the next turn starting again from the current smallest number among active players.</li>
+                  <li>After a challenge, if any active players remain, continue with the next turn starting again from the current highest rank among active players.</li>
               </ul>
               
               <h4>End</h2>
               <ul>
-                  <li>Game ends when one active player remains (now holds biggest number).</li>
+                  <li>Game ends when one active player remains (the player with the lowest rank).</li>
                   <li>All keep current gifts.</li>
               </ul>
             </div>
