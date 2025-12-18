@@ -92,32 +92,50 @@
         <div class="container col-xxl-8 px-4 py-5">
           <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-lg-12">
-                <h1 class="display-5 fw-bold lh-1 mb-3 text-success">How to play</h1>
-                <p>In a Norse Pig gift exchange, each participant brings a wrapped, unmarked gift and places it in a designated area. Guests are given numbers as they arrive, or their names are randomly drawn, and they select gifts in that order — with a twist.</p>
-                <p>On the first turn, the person assigned with #1 picks out a gift and opens it so all can see what it is. On the second turn, the person assigned with #2 gets the choice of “stealing” #1’s unwrapped gift or choosing a wrapped one from the pile. If #2 steals #1’s gift, then #1 must choose and open a wrapped gift.</p>
-                <p>As subsequent players take their turns, they either select a new gift or take any already opened gift from any of the other players. Have any player who has a gift taken away either choose a new gift or take an already-opened gift from another player.</p>
-                <p>The game continues with the following rules:</p>
-                <ul>
-                <li>If someone steals your gift, you can steal someone else’s gift or choose and open a wrapped one.</li>
-                <li>Continue until everyone has had a turn for a gift. A turn is ended when an unopened gift has been opened.</li>
-                <li>A gift can only be “stolen” once during a turn. If a gift is taken from someone during one round, she cannot take it back during that same round. She can, however, take it back in a later round if she is in a position to select a gift.</li>
-                <li>A gift cannot be immediately stolen back from the player who just stole it.</li>
-                <li>Once a gift has 3 “owners,” the 3rd owner of a gift gets to keep it – it is retired and can’t be stolen again.</li>
-                <li>The gift exchange ends when the last wrapped gift is chosen and opened.</li>
-                <li>After the last turn, the person who started (since she didn’t get a chance at the beginning) can put back the gift and “steal” a gift according to the rules.</li>
-                </ul>
-                <p>This starts the gift exchange again (following the above rules) and ends when someone chooses or is forced to take the gift given up by the person with #1.</p>
+              <h1>Game Rules</h1>
+              
+              <h2>Setup</h2>
+              <ul>
+                  <li>3+ players.</li>
+                  <li>Gifts wrapped in center of table.</li>
+              </ul>
+              
+              <h2>Round 1: Rank Players</h2>
+              <ul>
+                  <li>Deal all players one 5-card poker hand.</li>
+                  <li>Assign numbers by hand strength: smallest number #1 (best hand) to biggest number (worst hand).</li>
+                  <li>Ties: Redeal only tied players until resolved.</li>
+                  <li>Player with smallest number picks/opens gift from center first, then next smallest, etc.</li>
+              </ul>
+              
+              <h2>Round 2: Challenges</h2>
+              <p>Gifts visible.</p>
+              <ul>
+                  <li>Turns proceed in order from smallest number to biggest among active (non-retired) players. On your turn, you may issue a challenge or pass.</li>
+                  <li>You may challenge only players with <strong>bigger</strong> numbers. Smallest number can challenge anyone; biggest number can challenge none.</li>
+                  <li>Resolve: New 5-card poker hand (challenger vs. target).
+                      <ul>
+                          <li><strong>Challenger wins:</strong> Swap gifts. Numbers unchanged. Challenger retires (no further challenges).</li>
+                          <li><strong>Challenger loses:</strong> No gift swap. Swap numbers. Challenger stays active.</li>
+                      </ul>
+                  </li>
+                  <li>After a challenge, if any active players remain, continue with the next turn starting again from the current smallest number among active players.</li>
+              </ul>
+              
+              <h2>End</h2>
+              <ul>
+                  <li>Game ends when one active player remains (now holds biggest number).</li>
+                  <li>All keep current gifts.</li>
+              </ul>
             </div>
           </div>
         </div>
-
 
     </main>
     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/e41e1387d0.js" crossorigin="anonymous"></script>
-
 
     </body>
 </html5>
