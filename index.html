@@ -34,13 +34,13 @@
         }
       }
     
-      .b-example-divider {
+      /* .b-example-divider {
         height: 2.5rem;
         background-color: rgba(0, 0, 0, .1);
         border: solid rgba(0, 0, 0, .15);
         border-width: 1px 0;
         box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+      } */
 
         @media (min-width: 992px) {
         .rounded-lg-3 { border-radius: .3rem; }
@@ -53,25 +53,26 @@
   </head>
   <body>
     <main>
-
+      <section style="background-color: #dddddd">
         <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="images/boar.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="450" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3 text-success">Norse Pig</h1>
-                <p class="lead">Norse Pig is a gift exchange game that draws on elements of luck to decide on who gets what.</p>
-            </div>
+            <div class="row align-items-center">
+                <h1 class="col-sm-6 fw-bold lh-1 display-2 text-success text-center">Norse Pig</h1>
+                <div class="col-sm-6 col-lg-6">
+                    <img src="images/norse-pig.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="450" loading="lazy">
+                </div>
+          </div>       
+            <div class="row flex-lg-row-reverse align-items-center py-3">
+                <p class="lead text-center fw-bold">Norse Pig is a gift exchange game that draws on elements of luck to decide on who gets what.</p>
             </div>
         </div>
+      </section>
 
         <div class="b-example-divider"></div>
 
         <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-3 py-1">
             <div class="col-lg-12">
-                <h1 class="display-5 fw-bold lh-1 mb-3 text-danger">Gift Value Requirement: $50</h1>
+                <h3 class="fw-bold lh-1 mb-3 text-danger">Gift Value Requirement: $50</h1>
                 <ul>
                     <li>The <strong>paid value (before taxes)</strong> of the gift must be at least <strong>$50</strong></li>
                     <div class="alert alert-danger">
@@ -87,20 +88,19 @@
             </div>
         </div>
 
-        <div class="b-example-divider"></div>
-
+      <section style="background-color: #dddddd">
         <div class="container col-xxl-8 px-4 py-5">
-          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-3 py-1">
             <div class="col-lg-12">
-              <h1 class="display-5 fw-bold lh-1 mb-3 text-success">How to play</h1>
+              <h2 class=" fw-bold lh-1 mb-3 text-success">How to play</h1>
               
-              <h2>Setup</h2>
+              <h4>Setup</h2>
               <ul>
                   <li>3+ players.</li>
                   <li>Gifts wrapped in center of table.</li>
               </ul>
               
-              <h2>Round 1: Rank Players</h2>
+              <h4>Round 1: Rank Players</h2>
               <ul>
                   <li>Deal all players one 5-card poker hand.</li>
                   <li>Assign numbers by hand strength: smallest number #1 (best hand) to biggest number (worst hand).</li>
@@ -108,7 +108,7 @@
                   <li>Player with smallest number picks/opens gift from center first, then next smallest, etc.</li>
               </ul>
               
-              <h2>Round 2: Challenges</h2>
+              <h4>Round 2: Challenges</h2>
               <p>Gifts visible.</p>
               <ul>
                   <li>Turns proceed in order from smallest number to biggest among active (non-retired) players. On your turn, you may issue a challenge or pass.</li>
@@ -122,7 +122,7 @@
                   <li>After a challenge, if any active players remain, continue with the next turn starting again from the current smallest number among active players.</li>
               </ul>
               
-              <h2>End</h2>
+              <h4>End</h2>
               <ul>
                   <li>Game ends when one active player remains (now holds biggest number).</li>
                   <li>All keep current gifts.</li>
@@ -130,7 +130,7 @@
             </div>
           </div>
         </div>
-
+      </section>
     </main>
     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
