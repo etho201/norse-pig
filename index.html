@@ -12,6 +12,9 @@
   <style>
     html, body,main {
       height: 100%;
+      width: 100%;
+      margin:0;
+      padding:0;
     }
     body {
       background: #1b1b1b;
@@ -25,12 +28,12 @@
     }
 
     .table-container {
-      position: relative;
-      width: 400px;
-      height: 400px;
+      position: absolute;
+      width: 350px;
+      height: 350px;
       background: #2e7d32;
       border-radius: 50%;
-      margin-left: 25%;
+      margin-top: 10%;
       box-shadow: inset 0 0 20px rgba(125, 124, 124, 0.5);
     }
 
@@ -46,19 +49,18 @@
       height: 40px;
       background: #ffcc80;
       border-radius: 50%;
-      margin: 50px 40px 3px;
     }
 
     .info {
       background: #dddddd;
-      padding: 4px 6px;
+      width: 40px;
       border-radius: 6px;
       font-size: 14px;
     }
 
     .controls {
-      margin-top: -27%;
-      margin-left: 80%
+      /* margin-top: -27%; */
+      /* margin-left: 50% */
     }
 
     button {
@@ -206,14 +208,16 @@
            <div class="row flex-lg-row-reverse align-items-center g-3 py-1">
             <div class="col-lg-12"> 
           <h3 class="fw-bold lh-1 mb-3 text-danger">Example</h3>
-          <div style="margin-bottom: 30%">
+          <div >
           <h4>Round 1</h4>
-    <div class="table-container " id="table">
+          <p>Five players played the poker game and received a ranking based on the hand strength.</p>
+          <img src="images/table.png" alt="poker table" width="300"/>
+    <!-- <div class="table-container " id="table"> -->
     <!-- Players will be inserted here -->
   </div>
-    <div class="controls">
+    <!-- <div class="controls">
     <button onclick="deal()">Deal New Cards</button>
-  </div>
+  </div> -->
 </div>
 <div>
           <h4>Round 2</h4>
@@ -281,8 +285,7 @@
         player.innerHTML = `
           <div class="avatar"></div>
           <div class="info">
-            <strong>${randomName()}</strong><br>
-            Ranking: ${shuffledCards[i]}
+             ${shuffledCards[i]}
           </div>
         `;
 
