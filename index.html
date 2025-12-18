@@ -66,18 +66,31 @@
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-3 py-1">
             <div class="col-lg-12">
-                <h3 class="fw-bold lh-1 mb-3 text-danger">Gift Value Requirement: $50</h1>
-                <ul>
-                    <li>The <strong>paid value (before taxes)</strong> of the gift must be at least <strong>$50</strong></li>
-                    <div class="alert alert-danger" role="alert">
-                      <i class="fas fa-bomb"></i> <strong>Important:</strong> You cannot pay less than $50 for your gift. It's okay to pay more than $50 or find a deal for an item that's worth $70 and only pay $50, but you can't pay less than $50.
-                    </div>
-                    <li>Must <strong>surrender receipt (proof of purchase)</strong> showing purchase information to be eligible to play.</li>
-                    <li>You can combine multiple items to reach the value requirement. Just be sure to keep them together as they can't be broken up during the game.</li>
-                    <li>The gift must be gender-neutral. Since the final recipient ultimately has no control over what he/she receives, let's be sure the gifts are not women's earrings or men's underwear. Bring something you think anyone would be happy to have.</li>
-                    <li>All are welcome to play (adults, kids, animals) as long as you bring a gift that meets the criteria. If you bring a gift, you can expect to receive a gift in return.</li>
-                    <li>No digital media items (like movies, music, video games) and no DVDs or Blu-ray. Board games are allowed.</li>
-                </ul>
+
+              <script>
+                const giftValue = 50;
+
+                // Replace all elements with the class "giftValue" dynamically
+                document.addEventListener("DOMContentLoaded", function () {
+                  const elements = document.querySelectorAll(".giftValue");
+                  elements.forEach((element) => {
+                    element.innerText = giftValue;
+                  });
+                });
+              </script>
+
+              <h3 class="fw-bold lh-1 mb-3 text-danger">Gift Value Requirement: $<span class="giftValue"></span></h1>
+              <ul>
+                  <li>The <strong>paid value (before taxes)</strong> of the gift must be at least <strong>$<span class="giftValue"></span></strong></li>
+                  <div class="alert alert-danger" role="alert">
+                    <i class="fas fa-bomb"></i> <strong>Important:</strong> You cannot pay less than $<span class="giftValue"></span> for your gift. It's okay to pay more than $<span class="giftValue"></span> or find a deal for an item that's worth $<script>document.write(giftValue + 20);</script> and only pay $<span class="giftValue"></span>, but you can't pay less than $<span class="giftValue"></span>.
+                  </div> 
+                  <li>Must <strong>surrender receipt (proof of purchase)</strong> showing purchase information to be eligible to play.</li>
+                  <li>You can combine multiple items to reach the value requirement. Just be sure to keep them together as they can't be broken up during the game.</li>
+                  <li>The gift must be gender-neutral. Since the final recipient ultimately has no control over what he/she receives, let's be sure the gifts are not women's earrings or men's underwear. Bring something you think anyone would be happy to have.</li>
+                  <li>All are welcome to play (adults, kids, animals) as long as you bring a gift that meets the criteria. If you bring a gift, you can expect to receive a gift in return.</li>
+                  <li>No digital media items (like movies, music, video games) and no DVDs or Blu-ray. Board games are allowed.</li>
+              </ul>
             </div>
             </div>
         </div>
